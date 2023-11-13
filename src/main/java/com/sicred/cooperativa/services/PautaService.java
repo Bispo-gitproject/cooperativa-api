@@ -2,7 +2,6 @@ package com.sicred.cooperativa.services;
 
 import com.sicred.cooperativa.entities.PautaEntity;
 import com.sicred.cooperativa.repositories.PautaRepository;
-import org.hibernate.query.criteria.internal.expression.function.CurrentDateFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

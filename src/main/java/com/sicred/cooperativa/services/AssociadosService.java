@@ -19,14 +19,17 @@ public class AssociadosService {
     public AssociadosEntity cadastrarAssociados(AssociadosEntity novoAssociados, EnderecoEntity novoEndereco) {
         EnderecoEntity endereco = viaCEPService.consultarCEP(novoEndereco.getCep());
 
-        novoEndereco.setIdEndereco(endereco.getIdEndereco());
-        novoEndereco.setCep(endereco.getCep());
-        novoEndereco.setBairro(endereco.getBairro());
-        novoEndereco.setLocalidade(endereco.getLocalidade());
-        novoEndereco.setLogradouro(endereco.getLogradouro());
-        novoEndereco.setUf(endereco.getUf());
+        if (endereco != null){
+            novoEndereco.setIdEndereco(endereco.getIdEndereco());
+            novoEndereco.setCep(endereco.getCep());
+            novoEndereco.setBairro(endereco.getBairro());
+            novoEndereco.setLocalidade(endereco.getLocalidade());
+            novoEndereco.setLogradouro(endereco.getLogradouro());
+            novoEndereco.setUf(endereco.getUf());
 
-        novoAssociados.setEndereco(novoEndereco);
+            novoAssociados.setEndereco(novoEndereco);
+        }
+
         return associadosRepository.save(novoAssociados);
 
     }
