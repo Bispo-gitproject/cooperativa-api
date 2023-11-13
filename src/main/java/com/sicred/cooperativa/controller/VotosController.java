@@ -12,7 +12,7 @@ public class VotosController {
     private VotoService votoService;
 
     @PostMapping("/receber-voto/{pautaId}")
-    public ResponseEntity<String> reeberVoto(@PathVariable Long pautaId, @RequestBody VotoEntity voto){
+    public ResponseEntity<String> receberVoto(@PathVariable Long pautaId, @RequestBody VotoEntity voto){
         return votoService.receberVoto(pautaId, voto);
     }
 

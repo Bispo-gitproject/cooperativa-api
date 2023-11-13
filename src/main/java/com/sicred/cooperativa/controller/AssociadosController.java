@@ -3,7 +3,6 @@ package com.sicred.cooperativa.controller;
 import com.sicred.cooperativa.entities.AssociadosEntity;
 import com.sicred.cooperativa.entities.EnderecoEntity;
 import com.sicred.cooperativa.services.AssociadosService;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
