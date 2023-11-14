@@ -53,13 +53,16 @@ Os testes podem ser executados usando a ferramenta como o Postman
 # Collections para testes no postman
 
 ## Associados
-[Associados.postman_collection.json](https://github.com/Bispo-gitproject/cooperativa-api/files/13351919/Associados.postman_collection.json)
+
+[Associados.postman_collection.json](https://github.com/Bispo-gitproject/cooperativa-api/files/13352004/Associados.postman_collection.json)
 
 ## Pautas
-[Pautas.postman_collection.json](https://github.com/Bispo-gitproject/cooperativa-api/files/13351920/Pautas.postman_collection.json)
+
+[Pautas.postman_collection.json](https://github.com/Bispo-gitproject/cooperativa-api/files/13352006/Pautas.postman_collection.json)
 
 ## Votações
-[Votação.postman_collection.json](https://github.com/Bispo-gitproject/cooperativa-api/files/13351921/Votacao.postman_collection.json)
+
+[Votação.postman_collection.json](https://github.com/Bispo-gitproject/cooperativa-api/files/13352007/Votacao.postman_collection.json)
 
 
 
