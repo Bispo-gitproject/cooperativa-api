@@ -1,4 +1,4 @@
-[Pautas.postman_collection.json](https://github.com/Bispo-gitproject/cooperativa-api/files/13351904/Pautas.postman_collection.json)# cooperativa-api
+# cooperativa-api
 
 ## Descrição
 
