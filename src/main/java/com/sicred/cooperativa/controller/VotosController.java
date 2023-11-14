@@ -11,6 +11,10 @@ public class VotosController {
 
     private VotoService votoService;
 
+    public VotosController(VotoService votoService) {
+        this.votoService = votoService;
+    }
+
     @PostMapping("/receber-voto/{pautaId}")
     public ResponseEntity<String> receberVoto(@PathVariable Long pautaId, @RequestBody VotoEntity voto){
         return votoService.receberVoto(pautaId, voto);

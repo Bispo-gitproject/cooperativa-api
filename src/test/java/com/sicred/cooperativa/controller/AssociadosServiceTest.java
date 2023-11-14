@@ -1,8 +1,5 @@
 package com.sicred.cooperativa.controller;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
-
 import com.sicred.cooperativa.entities.AssociadosEntity;
 import com.sicred.cooperativa.entities.EnderecoEntity;
 import com.sicred.cooperativa.repositories.AssociadosRepository;
@@ -10,29 +7,43 @@ import com.sicred.cooperativa.services.AssociadosService;
 import com.sicred.cooperativa.services.ViaCEPService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-public class AssociadosServiceTest {
+class AssociadosServiceTest {
 
+    @Mock
     private AssociadosRepository associadosRepository;
-    private ViaCEPService     viaCEPService;
+
+    @Mock
+    private ViaCEPService viaCEPService;
+
+    @InjectMocks
     private AssociadosService associadosService;
 
     @BeforeEach
-    public void setup() {
-        associadosRepository = mock(AssociadosRepository.class);
-        viaCEPService = mock(ViaCEPService.class);
-        associadosService = new AssociadosService(associadosRepository, viaCEPService);
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testCadastrarAssociados() {
-
+    void testCadastrarAssociados() {
+        // Configuração de dados de teste
         AssociadosEntity novoAssociado = new AssociadosEntity();
         novoAssociado.setCpfAssociados("12345678901");
-        novoAssociado.setNomeAssociados("Henrique Bispo");
+        novoAssociado.setNomeAssociados("John Doe");
 
         EnderecoEntity novoEndereco = new EnderecoEntity();
         novoEndereco.setCep("06036060");
+
+        EnderecoEntity enderecoMock = new EnderecoEntity();
+        enderecoMock.setIdEndereco(1L);
+        enderecoMock.setCep("06036060");
+        enderecoMock.setBairro("Bairro");
+        enderecoMock.setLocalidade("Localidade");
+        enderecoMock.setLogradouro("Logradouro");
+        enderecoMock.setUf("UF");
 
         AssociadosEntity result = associadosService.cadastrarAssociados(novoAssociado, novoEndereco);
 
