@@ -22,6 +22,13 @@ public class VotoService{
     private PautaRepository pautaRepository;
     private PautaService pautaService;
 
+    public VotoService(VotoRepository votoRepository, AssociadosRepository associadosRepository, PautaRepository pautaRepository, PautaService pautaService) {
+        this.votoRepository = votoRepository;
+        this.associadosRepository = associadosRepository;
+        this.pautaRepository = pautaRepository;
+        this.pautaService = pautaService;
+    }
+
     public ResponseEntity<String> receberVoto(Long idPauta, VotoEntity votoComputado) {
 
         validarIdAssociado(votoComputado.getIdAssociados());
